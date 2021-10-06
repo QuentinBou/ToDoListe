@@ -1,0 +1,17 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+
+<div class="bar-form">
+    <a href="{% url 'tasks' %}">&#8592; Retour</a>
+    <h1 style="text-align: center; font-size: 25px;">{{ task|title }}</h1>
+</div>
+
+<div class="card-body card-details">
+    <label style="text-decoration: underline; font-style: italic;">Description :</label>
+    <div class="details">{{ task.desc|title }}</div>
+</div>
+
+
+
+{% endblock content %}

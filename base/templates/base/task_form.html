@@ -1,0 +1,24 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+
+<div class="bar-form">
+    <a href="{% url 'tasks' %}">&#8592; Retour</a>
+</div>
+
+<div class="card-body">
+    <form method="POST" action="">
+        {% csrf_token %}
+        <label>Titre :</label>
+        {{ form.title }}
+
+        <label>Description :</label>
+        {{ form.desc }}
+
+        <input class="buton" type="submit" value="Enregistrer">
+    </form>
+</div>
+
+
+
+{% endblock content %}
